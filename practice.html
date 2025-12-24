@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tank Wars</title>
+    <link rel="stylesheet" href="practice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ 
+    <div id="startmenu" class="menu">
+        <div class="imgcontainer">
+            <img src="tank-wars.png" class="logo">
+        </div>
+
+        <button id="startbtn" class="menubtn">START GAME</button>
+        <button id="rulesbtn" class="menubtn">RULES</button>
+        <button id="settingsbtn" class="menubtn">SETTINGS</button>
+    </div>
+
+
+    <div id="rulespopup" class="popup hidden">
+        <div class="popupcontent">
+            <h2>Game Rules</h2>
+            <ul>
+                <li>Use arrow keys or WASD to move your tank.</li>
+                <li>Spacebar to shoot.</li>
+                <li>Destroy enemies to earn points.</li>
+                <li>Avoid getting hit — losing all health ends the game.</li>
+                <li>Collect power-ups for boosts.</li>
+            </ul>
+            <button id="closerulesbtn" class="closebtn">Close</button>
+        </div>
+    </div>
+    <div id="mapscreen" class="hidden flex">
+        <button id="snowmap" class="button">
+            <img src="snowmap.png" alt="">
+        </button>
+        <button id="desertmap" class="button">
+            <img src="desertmap.png" alt="">
+        </button>
+    </div>
+    <div id="gamescreen" class="hidden ">
+        <canvas id="gamecanvas" class="block"></canvas>
+    </div>
+
+    <div id="gameover" class="popup hidden">
+        <div class="popupcontent">
+            <h1 id="p1hidden"class="hidden">PLAYER 1 WINS</h1>
+            <h1 id="p2hidden"class="hidden">PLAYER 2 WINS</h1>
+            <button id="homescreen" class="closebtn">Home Screen</button>
+        </div>
+    </div>
+    <img src="snowmap.png" alt="snowmap" id="snow" class="hidden">
+    <img src="desertmap.png" alt="desertmap" id="desert" class="hidden">
+    <img id="redtank" src="red.png" alt="redtank" class="hidden">
+    <img id="bluetank" src="blue.png" alt="bluetank" class="hidden">
+    <img id="shield_" src="shield.png" alt="shield"class="hidden">
+    <img id="2x"src="2x.png" alt="2x" class="hidden">
+    <img src="lives.png" alt="lives" id="lives" class="hidden">
+    <script src="practice.js"></script>
+</body>
+</html>

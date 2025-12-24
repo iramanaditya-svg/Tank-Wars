@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url("tank_wars_bg.png");  
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    margin-top: px ;
+}
+.imgcontainer {
+    height: 40vh;
+    width: 50vw;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo {
+    width: 100%;
+    display: block;
+}
+
+.img{
+    align-items: center;
+}
+
+
+
+.menubtn:hover {
+    animation: buttonhover 0.35s forwards;
+    
+}
+
+
+@keyframes buttonhover {
+    0% {
+        transform: scale(1) ;
+    }
+    40% {
+        transform: scale(1.18) ; 
+    }
+    70% {
+        transform: scale(1.12) ; 
+    }
+    100% {
+        transform: scale(1.15) ; 
+    }
+}
+#gamecanvas{   
+    width: max-content;
+    height: 100vh;
+}
+
+#mapscreen{
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+.block{
+    display: block;
+}
+.flex{
+    display: flex;
+}
+.button{
+    background: none;
+    padding:0;
+    border: none;
+    cursor: pointer;
+}
+
+.button img{
+    margin: 40px;
+    border:4px solid black;
+    width:500px;
+    height:auto;
+}
+
+.menubtn {
+    font-family: "Sekuya", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    width: 500px;
+    font-size: 48px;
+    border: none;
+    border-radius: 10px;
+    background: #3a7afe;
+    color: white;
+    cursor: pointer;
+}
+
+.menubtn:hover {
+    background: #a63417;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupcontent {
+    background: #2b2b2b;
+    padding: 30px;
+    width: 450px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.closebtn {
+    
+    margin-top: auto 20px;
+    padding: 10px 20px;
+    background: #ff4444;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    background: #cc3333;
+}
+
+
+.hidden {
+    display: none;
+}
