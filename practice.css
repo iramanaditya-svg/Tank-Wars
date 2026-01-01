@@ -6,6 +6,9 @@ body{
     url("tank_wars_bg.png");  
     color: white;
     font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .menu {
@@ -18,8 +21,60 @@ body{
     justify-content: center;
     align-items: center;
 }
+.player{
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
 
+.name{
+    font-size: 30px;
+}
+.pass{
+    font-size: 30px;
+}
+.email{
+    font-size: 30px;
+}
+.auth-input {
+  padding: 14px;
+  border-radius: 30px;
+  border: 2px ;
+  box-shadow: inset 0px 0px 10px #444;
+}
 
+#middle{
+    flex-direction: row;
+    gap:50px;
+}
+#authscreen{
+    font-family: "Sekuya", sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 50px;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-card {
+  animation: fadeUp 0.6s forwards;
+}
+.auth-input:focus{
+    animation: buttonhover 0.35s forwards;
+}
 .logo {
     width: 100%;
     display: block;
@@ -35,32 +90,138 @@ body{
     animation: buttonhover 0.35s forwards;
     
 }
+#gamehis {
+  margin: auto;
+  width: max-content;
+  padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.match-card {
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+  font-family: "Sekuya", sans-serif;
+  animation: fadeUp 0.4s ease;
+}
+
+.players {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.p1 {
+  font-size: 20px;
+  color: #4da6ff;
+}
+
+.p2 {
+    font-size: 20px;
+  color: #ff4d4d;
+}
+
+.vs {
+  margin: 16px;
+  font-size: 10px;
+}
+
+.winner {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 40px;
+  color: #ffd700;
+}
 
 
+#gamehis div{
+    padding: 10px ;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#leaderboard{
+    position: relative;
+    width: max-content;
+    margin: auto;
+    flex-direction: column;
+    height: auto;
+    animation: fadeUp 0.6s forwards;
+    background-color: rgba(0,0,0,0.75);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.lead{
+    margin: 0px auto;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+.winners{
+    box-shadow: 0px 0px 10px white;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 20px;
+    gap: 5px;
+    font-family: "Sekuya", sans-serif;
+    border-radius: 30px ;
+    background-color: rgba(0,0,0,0.5);
+}
+.Winner{
+font-size: 30px;
+  color: #ffd700;
+}
+#leadclose{
+    margin:  auto;
+    margin-top: 20px;
+}
+#hisclose{
+    margin:  auto;
+    margin-top: 20px;
+}
+#leadcls{
+    font-family: "Sekuya", sans-serif;
+    font-size: 20px;
+}
+.wins{
+font-size: 35px;
+  color: #ffd700;
+}
 @keyframes buttonhover {
     0% {
         transform: scale(1) ;
     }
     40% {
-        transform: scale(1.18) ; 
+        transform: scale(1.1) ; 
     }
     70% {
-        transform: scale(1.12) ; 
+        transform: scale(1.08) ; 
     }
     100% {
-        transform: scale(1.15) ; 
+        transform: scale(1.09) ; 
     }
 }
 #gamecanvas{   
     width: max-content;
     height: 100vh;
+    animation: fadeUp 0.6s forwards;
 }
 
 #mapscreen{
     height:100vh;
     justify-content: center;
     align-items: center;
+    animation: fadeUp 0.6s forwards;
 }
+
+
 .block{
     display: block;
 }
@@ -73,7 +234,9 @@ body{
     border: none;
     cursor: pointer;
 }
-
+.button:hover{
+    animation: buttonhover 0.35s forwards;
+}
 .button img{
     margin: 40px;
     border:4px solid black;
@@ -84,51 +247,75 @@ body{
 .menubtn {
     font-family: "Sekuya", system-ui;
     font-weight: 400;
-    font-style: normal;
     display: block;
     margin: 20px auto;
-    padding: 15px 30px;
-    width: 500px;
+    padding: 15px;
+    width: 600px;
     font-size: 48px;
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     background: #3a7afe;
     color: white;
     cursor: pointer;
 }
-
+#winpop{
+    gap: 20px;
+}
+#gameover{
+    width: max-content;
+    margin-top: 18%;
+    border: 10px solid white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
 .menubtn:hover {
     background: #a63417;
 }
-
-.popup {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.75);
-    display: flex;
+.popup{
+    animation: fadeUp 0.6s forwards; 
+    box-shadow: 0px 0px 10px white;
+    margin: 0px auto;
+    padding: 40px;
+    border-radius: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50vw;
+    background-color: rgba(0,0,0,0.75);
     justify-content: center;
     align-items: center;
 }
 
-.popupcontent {
-    background: #2b2b2b;
-    padding: 30px;
-    width: 450px;
-    border-radius: 15px;
-    text-align: left;
+.popupcontent{
+    font-family: "Sekuya", system-ui;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.closebtn {
+.popupcontent li{
+    margin: 20px;
+}
+.popupcontent img{
     
+    border-radius: 30px;
+    transform: translateX(65px);
+    width: auto;
+    height: 300px;
+}
+.closebtn {
+    font-family: "Sekuya", system-ui;
+    box-shadow: inset 0px 0px 20px black;
     margin-top: auto 20px;
     padding: 10px 20px;
     background: #ff4444;
-    border: none;
+    border: 4px solid white;
     color: white;
-    border-radius: 8px;
+    border-radius:40px;
     cursor: pointer;
 }
-
+.closebtn:hover{
+    animation: buttonhover 0.35s forwards;
+}
 .closebtn:hover {
     background: #cc3333;
 }
