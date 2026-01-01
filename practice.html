@@ -8,6 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="authscreen" class="auth-card hidden flex">       
+        <h2 style="font-size: 50px; color: #ffd700;" >✘-✘-✘-✘-✘-✘-✘ LOG-IN ✘-✘-✘-✘-✘-✘-✘  </h2>
+        <div id="middle"class="flex">
+        <div id="player 1" class="player flex" style="color: #4da6ff">
+       - - - - - Player 1 - - - - -
+        <input id="name1" class="name auth-input" placeholder="          Username">
+        <input id="email1" class="email auth-input"placeholder="             Email">
+        <input id="pass1" class="pass auth-input"type="password" placeholder="          Password">
+        </div>
+        <div id="player2" class="player flex" style="color: #ff4d4d">
+        - - - - - Player 2 - - - - -
+        <input id="name2" class="name auth-input"placeholder="          Username">
+        <input id="email2" class="email auth-input"placeholder="             Email">
+        <input id="pass2" class="pass auth-input"type="password" placeholder="          Password">
+        </div>
+        </div>
+        <button id="loginbtn" class="closebtn" style="font-family: Sekuya; font-size: 35px; ">Continue</button>
+    </div>
 
  
     <div id="startmenu" class="menu">
@@ -17,21 +35,27 @@
 
         <button id="startbtn" class="menubtn">START GAME</button>
         <button id="rulesbtn" class="menubtn">RULES</button>
-        <button id="settingsbtn" class="menubtn">SETTINGS</button>
+        <button id="gamehisbtn" class="menubtn">GAME HISTORY</button>
     </div>
 
 
-    <div id="rulespopup" class="popup hidden">
-        <div class="popupcontent">
-            <h2>Game Rules</h2>
+    <div id="rulespopup" class="flex hidden popup">
+        <div class="popupcontent flex">
+            <h2 style="font-size: 40px;color: #ffd700;">✘-✘-✘-GAME RULES-✘-✘-✘</h2>
             <ul>
-                <li>Use arrow keys or WASD to move your tank.</li>
-                <li>Spacebar to shoot.</li>
-                <li>Destroy enemies to earn points.</li>
-                <li>Avoid getting hit — losing all health ends the game.</li>
-                <li>Collect power-ups for boosts.</li>
+                <li>Use W/S/A/D keys to control movements for Player 1 and Arrow keys to control movements for Player 2.</li>
+                <li>Use F key to shoot for player 1 and Enter key to shoot for Player 2.</li>
+                <li>Destroy Enemy's tank to Win the Game.</li>              
+                <li>There is a Defined Arena. You can only Play inside this Black Outlined Area.</li>
+                <img src="rulesarena.png" alt="arena" class="arenapic">
+                <li>If your tank hits the enemy's home, You will end up losing a Life.</li>
+                <li>You can heal yourself inside your home.... But Be Careful!!! you have to come out in 5 seconds, otherwise will end up losing a life.</li>
+                <li>Losing 3 consecutive Lives will let the enemy win.</li>
+                <li>Collect 2x and Shield Powerups, doing so will increase your speed by 2 times and protect you from bullets respectively.</li>
+                <li>You can select a map on which you want to play.</li>
+                <li>I hope you'll enjoy..... Bang it!!</li>
             </ul>
-            <button id="closerulesbtn" class="closebtn">Close</button>
+            <button id="closerulesbtn" class="closebtn" style="font-size: 20px;">Close</button>
         </div>
     </div>
     <div id="mapscreen" class="hidden flex">
@@ -46,13 +70,22 @@
         <canvas id="gamecanvas" class="block"></canvas>
     </div>
 
-    <div id="gameover" class="popup hidden">
-        <div class="popupcontent">
-            <h1 id="p1hidden"class="hidden">PLAYER 1 WINS</h1>
-            <h1 id="p2hidden"class="hidden">PLAYER 2 WINS</h1>
-            <button id="homescreen" class="closebtn">Home Screen</button>
+    <div id="gameover" class="popup hidden flex">
+        <div class="popupcontent flex">
+            <h1 style="font-size: 60px;color: #ffd700;" id="p1hidden"class="hidden">🏆 PLAYER 1 WINS 🏆</h1>
+            <h1 style="font-size: 60px;color: #ffd700;" id="p2hidden"class="hidden">🏆 PLAYER 2 WINS 🏆</h1>
+            <div id="winpop"class="flex">
+            <button id="homescreen" class="closebtn" style="font-size: 30px;">HOMESCREEN</button>
+            <button id="leader_board" class="closebtn" style="font-size: 30px;">LEADERBOARD</button>
+            </div>
         </div>
     </div>
+
+    <div id="leaderboard" class="hidden flex" style="font-family: Sekuya;">
+        <div class="lead">- - - - - - LEADERBOARD - - - - - -</div>
+    </div>
+    <audio id="bg"src="bg.mp3"></audio>
+    <div id="gamehis" class="hidden flex"></div>
     <img src="snowmap.png" alt="snowmap" id="snow" class="hidden">
     <img src="desertmap.png" alt="desertmap" id="desert" class="hidden">
     <img id="redtank" src="red.png" alt="redtank" class="hidden">
@@ -60,6 +93,6 @@
     <img id="shield_" src="shield.png" alt="shield"class="hidden">
     <img id="2x"src="2x.png" alt="2x" class="hidden">
     <img src="lives.png" alt="lives" id="lives" class="hidden">
-    <script src="practice.js"></script>
+    <script type="module" src="practice.js"></script>
 </body>
 </html>
